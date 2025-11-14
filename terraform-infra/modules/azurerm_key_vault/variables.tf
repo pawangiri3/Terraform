@@ -1,6 +1,6 @@
 # variables.tf for module: azurerm_key_vault
 
-variable "key_vaults" {
+variable "vms" {
   type = map(object({
     name                        = string
     location                    = string

@@ -17,6 +17,12 @@ terraform {
 }
 
 provider "azurerm" {
-  features {}
+  features {
+    key_vault {
+      purge_soft_delete_on_destroy    = true
+      recover_soft_deleted_key_vaults = true
+    }
+    }
+
   subscription_id = "6dbc33a2-5da4-4090-8ac2-b8dde7d2a834"
 }

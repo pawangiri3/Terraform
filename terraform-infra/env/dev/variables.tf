@@ -1,3 +1,6 @@
-variable "rgs" {
+
+
+variable "vms" {
   
 }
+

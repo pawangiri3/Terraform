@@ -1,0 +1,10 @@
+# main.tf for module: azurerm_public_ip
+
+resource "azurerm_public_ip" "pip" {
+  for_each            = var.vms
+  name                = each.value.pip_name
+  resource_group_name = each.value.resource_group_name
+  location            = each.value.location
+  allocation_method   = each.value.allocation_method
+  tags                = each.value.tags
+}
